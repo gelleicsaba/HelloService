@@ -1,3 +1,4 @@
+export {}
 const express = require('express')
 const bodyParser = require('body-parser')
 
@@ -6,12 +7,13 @@ const weatherRouter = require('./routes/weather.ts')
 const homeRouter = require('./routes/home.ts')
 const settingsRouter = require('./routes/settings.ts')
 
-const PORT = 3000
-const HOST_NAME = "localhost"
+const PORT:number = 3000
+const HOST_NAME:string = "localhost"
 
 const app = express()
 app.use(express.static("client"))
 app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
 
 app.use("/weather", weatherRouter)
 app.use("/about", aboutRouter)

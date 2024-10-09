@@ -1,7 +1,8 @@
+export {}
 const express = require('express')
 const weatherRoute = express.Router()
 
-weatherRoute.get("/", (req, res)=> {
+weatherRoute.get("/", (req?:any, res?: any)=> {
     const weatherInfo ={
         siteName: "Weather",
         description: 'bad',
