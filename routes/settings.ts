@@ -22,10 +22,7 @@ const setGreetings = async (greetings?: string): Promise<boolean> => {
     const filePath = resolve('settings/settings.json')
     const data: IDataNode = JSON.parse(await readFile(filePath, { encoding: 'utf8' }))
     data.greetings = greetings
-    await writeFile(filePath, JSON.stringify(data), ()=> {
-        console.log("Write error!")
-        return false
-    })
+    await writeFile(filePath, JSON.stringify(data), ()=> { })
     return true
 }
 
