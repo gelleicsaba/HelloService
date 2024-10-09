@@ -1,0 +1,22 @@
+{
+  "name": "helloservice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.ts",
+    "watch": "node --watch server.ts"
+  },
+  "author": "Gellei Csaba",
+  "license": "ISC",
+  "description": "Example NodeJs app",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "typescript": "^5.6.3"
+  }
+}
