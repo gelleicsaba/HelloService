@@ -15,7 +15,7 @@ interface IDataNode {
 const getData = async (): Promise<IDataNode> => {
     const filePath = resolve('settings/settings.json')
     const contents = await readFile(filePath, { encoding: 'utf8' })
-    return contents
+    return JSON.parse(contents)
 }
 
 const setGreetings = async (greetings?: string): Promise<boolean> => {

@@ -8,7 +8,9 @@ const homeRouter = require('./routes/home.ts')
 const settingsRouter = require('./routes/settings.ts')
 
 const PORT:number = 3000
-const HOST_NAME:string = "localhost"
+// flutter-hez nem működik a localhost
+// ezért ip címre javítottam
+const HOST_NAME:string = "192.168.0.101"
 
 const app = express()
 app.use(express.static("client"))
